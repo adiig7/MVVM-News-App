@@ -1,8 +1,7 @@
 package com.androiddevs.mvvmnewsapp.db
 
 import androidx.room.TypeConverter
-import com.androiddevs.mvvmnewsapp.ui.Source
-import java.security.CodeSource
+import com.androiddevs.mvvmnewsapp.models.Source
 
 class Converters {
     fun fromSource(source: Source): String{
@@ -10,7 +9,7 @@ class Converters {
     }
 
     @TypeConverter
-    fun toSource(name: String): Source{
+    fun toSource(name: String): Source {
         return Source(name, name)
     }
 }
